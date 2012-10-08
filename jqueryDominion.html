@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>jQuery dominion</title>
+  <link rel="stylesheet" type="text/css" href="css/screen.css" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <!--[if IE]> 
+    <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen, projection" />
+  <![endif]-->
+</head>
+<body>
+<div id="container" class="container">
+  <div id="content">
+    <div id="south-player">
+      <div class="player">
+        <div class="player-name">South Player</div>
+        <div class="player-wins">X wins</div>
+        <div class="player-losses">X losses</div>
+      </div>
+      <div class="turn">This Turn:<br />
+        <span class="actions"></span> Action(s)<br />
+        <span class="buys"></span> buy(s)<br />
+        <span class="money"></span> money
+        <input class="new-game" type="button" value="New Game" />
+        <input class="end-turn" type="button" value="End Turn" />
+      </div>
+      <div class="deck">
+        <a href="#" class="show-pile">Deck</a>
+        <a href="#" class="show-pile">Player Cards</a>
+      </div>
+      <div class="discard">
+        <a href="#" class="show-pile">Discard</a>
+      </div>
+      <ul id="player-cards" class="cards">
+        <li></li>
+      </ul>
+    </div>
+    <div id="north-player">
+      <div class="player">
+        <div class="player-name">North Player</div>
+        <div class="player-wins">X wins</div>
+        <div class="player-losses">X losses</div>
+      </div>
+      <div class="turn">This Turn:
+        <div class="awaiting">Awaiting Turn...</div>
+        <div class="actions hidden">X Actions Remaining</div>
+        <div class="buys hidden">X buys</div>
+        <div class="money hidden">X Money</div>
+      </div>
+      <div class="deck">Deck</div>
+      <div class="discard">Discard</div>
+      <ul class="cards">
+        <li class="hidden-card">hidden card 1</li>
+        <li class="hidden-card">hidden card 2</li>
+        <li class="hidden-card">hidden card 3</li>
+        <li class="hidden-card">hidden card 4</li>
+        <li class="hidden-card">hidden card 5</li>
+      </ul>
+    </div>
+    <div id="play-area">
+      <div id="buy-cards" class="buy-cards">
+        <div class="header">Buy cards here!</div>
+        <ul class="cards cards-to-buy">
+          <li></li>
+        </ul>
+        <ul class="cards money-cards">
+          <li></li>
+        </ul>
+        <ul class="cards vp-cards">
+          <li></li>
+        </ul>
+      </div>
+      <div id="events-area" class="events-area">
+        <div class="header">Your Events</div>
+        <ul class="play-card"><li>What to do?</li></ul>
+      </div>
+   </div>
+  </div>
+  <div id="footer" class="footer"> 
+    <div class="footer-content">
+      <a href="http://davidwparker.com">davidwparker.com</a>
+    </div>
+  </div>
+  <ul id="hidden-cards" class="hidden">
+    <li class="player-card card">
+      <div class="card-title"></div>
+      <div class="card-stats"></div>
+      <input type="hidden" class="card-type" value="" />
+      <a class="card-play" href="#">play card</a>
+    </li>
+    <li class="card-buy">
+      <div class="card-title"></div>
+      <div class="card-stats"></div>
+      <input type="hidden" class="card-type" value="" />
+      <span class="card-cost"></span> Cost<br />
+      <span class="card-qty"></span> Left<br />
+      <a class="card-info" href="#">in</a>
+      <a class="buy-a-card" href="#">buy card</a>
+    </li>
+  </ul>
+</div>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="js/application.js"></script>
+</body>
+</html>
